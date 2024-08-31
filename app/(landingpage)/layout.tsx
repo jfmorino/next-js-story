@@ -1,15 +1,16 @@
 import React from 'react'
 import Navbar from './_components/navbar'
+import Footer from './_components/footer'
 
 function LandingPageLayout({ children }: {
     children:
     React.ReactNode
 }) {
     return (
-        <div className=' h-full'>
+        <div className='h-full'>
             <Navbar />
-            <main className=' h-full'>{children}</main>
-            footer
+            <main className=''>{children}</main>
+            <Footer />
         </div>
     )
 }
