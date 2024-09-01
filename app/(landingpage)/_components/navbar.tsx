@@ -60,6 +60,9 @@ const Navbar = () => {
                     ))}
                 </div>
                 <div className='flex items-center gap-x-4'>
+                    <div className='flex items-center gap-x-2'>
+                        <ModeToggle />
+                    </div>
                     <SignedOut>
                         <div className='md:block hidden'>
                             <SignInButton mode='modal'>
