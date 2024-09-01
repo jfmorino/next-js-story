@@ -21,7 +21,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { usePathname } from 'next/navigation'
 
-const NavLinks = [
+export const NavLinks = [
     { label: "My story", href: "/story", icon: Book },
     { label: "My saves", href: "/saves", icon: Heart }
 ]
