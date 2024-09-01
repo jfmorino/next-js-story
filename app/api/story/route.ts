@@ -6,7 +6,7 @@ export async function POST(req: NextRequest) {
     const { userId } = auth()
 
     if (!userId) {
-        return NextResponse.json('unauthorized', { status: 500 })
+        return NextResponse.json("Unauthorized", { status: 500 })
     }
 
     const body = await req.json()
