@@ -15,8 +15,8 @@ datasource db {
 
 model Story {
   id     String  @id @default(auto()) @map("_id") @db.ObjectId
-  name   String
-  Story  String?
+  title  String
+  story  String?
   image  String?
   userId String
 

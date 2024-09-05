@@ -51,14 +51,14 @@ const NewStoryPage = () => {
 
             const res = await axios.post("/api/story", {
                 ...values,
-                userId
+                userId,
             })
 
             if (res.status === 201) {
                 toast("Story is Created", {
                     className: "bg-emerald-500 text-white"
                 })
-                router.push(`/story/${res.data.id}`)
+                router.push(`/story`)
                 router.refresh()
             }
         } catch (error) {
