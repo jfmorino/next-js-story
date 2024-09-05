@@ -21,6 +21,10 @@ export const columns: ColumnDef<Story>[] = [
         header: "Title",
     },
     {
+        accessorKey: "story",
+        header: "Story",
+    },
+    {
         accessorKey: "createdAt",
         header: "Created At",
         cell: ({ row }) => {
@@ -33,6 +37,7 @@ export const columns: ColumnDef<Story>[] = [
             )
         }
     },
+
     {
         id: "actions",
         cell: ({ row }) => {

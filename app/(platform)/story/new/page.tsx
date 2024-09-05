@@ -58,7 +58,7 @@ const NewStoryPage = () => {
                 toast("Story is Created", {
                     className: "bg-emerald-500 text-white"
                 })
-                router.push(`/story`)
+                router.push(`/story/${res.data.id}`)
                 router.refresh()
             }
         } catch (error) {
