@@ -54,7 +54,6 @@ const ImageForm = ({ initialData }: Props) => {
                 toggleEdit()
                 router.refresh()
             }
-
         } catch (error) {
             toast("Something went wrong", {
                 className: "bg-rose-500 text-white"
