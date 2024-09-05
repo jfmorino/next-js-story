@@ -9,7 +9,7 @@ function LandingPageLayout({ children }: {
     return (
         <div className='h-full'>
             <Navbar />
-            <main className=''>{children}</main>
+            <main className=' h-full max-w-7xl mx-auto px-5 relative pt-2'>{children}</main>
             <Footer />
         </div>
     )
