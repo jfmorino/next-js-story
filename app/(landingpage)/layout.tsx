@@ -7,9 +7,11 @@ function LandingPageLayout({ children }: {
     React.ReactNode
 }) {
     return (
-        <div className='h-full'>
+        <div className='h-auto flex flex-col'>
             <Navbar />
-            <main className=' h-full max-w-7xl mx-auto px-5 relative pt-2'>{children}</main>
+            <main className=' h-full max-w-7xl mx-auto px-5 relative pt-2'>
+                {children}
+            </main>
             <Footer />
         </div>
     )

@@ -9,9 +9,7 @@ import { ModeToggle } from '@/components/modeToggle'
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
     SheetHeader,
-    SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
 import { Menu, Plus } from 'lucide-react'

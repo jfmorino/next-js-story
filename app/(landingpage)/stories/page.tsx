@@ -13,6 +13,7 @@ import Image from 'next/image'
 import { ArrowRight, ImageIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import ReadStory from '@/components/readStory'
+import SaveForm from './_components/saveForm'
 
 const StoriesPage = async () => {
 
@@ -22,6 +23,7 @@ const StoriesPage = async () => {
         }
     })
 
+    const saves = await prisma.save.findMany()
 
     return (
         <div className='py-32 h-full'>
@@ -59,7 +61,7 @@ const StoriesPage = async () => {
                             <CardTitle className=' line-clamp-2'>{story.title}</CardTitle>
                             <CardDescription>{story.id}</CardDescription>
                         </CardHeader>
-                        <CardContent className='line-clamp-3'>
+                        <CardContent className='line-clamp-3 mb-4'>
                             <p>{story.story}</p>
                         </CardContent>
                         <CardFooter className=' flex items-center justify-between'>
@@ -68,8 +70,8 @@ const StoriesPage = async () => {
                                     Read More
                                     <ArrowRight className=' ml-2 h-5 w-5' />
                                 </Button>
-
                             </ReadStory>
+                            <SaveForm saves={saves} story={story} />
                         </CardFooter>
                     </Card>
                 ))}
