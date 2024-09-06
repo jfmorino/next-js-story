@@ -12,7 +12,6 @@ export async function DELETE(req: NextRequest, { params }: {
         return NextResponse.json('Unauthorized', { status: 505 })
     }
 
-    const body = req.json()
 
     const existingSave = prisma.save.findUnique({
         where: {
@@ -24,7 +23,7 @@ export async function DELETE(req: NextRequest, { params }: {
         return NextResponse.json("Save Not Found", { status: 404 })
     }
 
-    const deleteSave = prisma.save.delete({
+    const deleteSave = await prisma.save.delete({
         where: {
             id: params.saveId
         }
